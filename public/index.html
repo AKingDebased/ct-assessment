@@ -18,16 +18,15 @@
 						  <img src="img/ct-logo.png" alt="Logo">
 						</a>
 						<div id="hamburger">
-							<div class="line" id="one">0.1 History</div>
-							<div class="line" id="two">0.2 Team</div>
+							<div class="line" id="one"></div>
+							<div class="line" id="two"></div>
+							<div class="line" id="three"></div>
 						</div>
 					  </div>
 					  <div class="mobile-menu">
 						<ul class="mobile-menu__items">
-						  <li><a href="javascript:;">HOME</a></li>
-						  <li><a href="javascript:;">ABOUT</a></li>
-						  <li><a href="javascript:;">CONTACT</a></li>
-						  <li><a href="javascript:;">FAQ</a></li>
+						  <li><a href="javascript:;">0.1 History</a></li>
+						  <li><a href="javascript:;">0.2 Team</a></li>
 						</ul>
 					  </div>
 					  <div id="navbarMenuHeroA" class="navbar-menu">
@@ -47,13 +46,27 @@
 			  <div class="container">
 			  </div>
 			</div>
-		</section>	
+		</section>
 		
 		<script>
+			// Hamburger logic
 			document.getElementById('hamburger').addEventListener('click', function(){
 				this.classList.toggle('active');
 				document.querySelector('.mobile-menu').classList.toggle('active');
 			});
+
+			// Sticky nav logic
+			var navbar = document.querySelector('.navbar.navbar-sticky'),
+				sticky = navbar.offsetTop;
+	
+			window.onscroll = function() {
+				console.log('handling sticky')
+				if (window.pageYOffset >= sticky) {
+					navbar.classList.add('sticky')
+				} else {
+					navbar.classList.remove('sticky');
+				}
+			};
 		</script>
 	</body>
 </html>
