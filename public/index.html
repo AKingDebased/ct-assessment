@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CT Assessment</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+		<link rel="stylesheet" href="styles/index.css">
+	</head>
+	<body>
+		<section class="hero is-fullheight">
+			<div class="hero-head">
+				<nav class="navbar">
+					<div class="container">
+					  <div class="navbar-brand">
+						<a class="navbar-item">
+						  <img src="img/ct-logo.png" alt="Logo">
+						</a>
+						<div id="hamburger">
+							<div class="line" id="one">0.1 History</div>
+							<div class="line" id="two">0.2 Team</div>
+						</div>
+					  </div>
+					  <div class="mobile-menu">
+						<ul class="mobile-menu__items">
+						  <li><a href="javascript:;">HOME</a></li>
+						  <li><a href="javascript:;">ABOUT</a></li>
+						  <li><a href="javascript:;">CONTACT</a></li>
+						  <li><a href="javascript:;">FAQ</a></li>
+						</ul>
+					  </div>
+					  <div id="navbarMenuHeroA" class="navbar-menu">
+						<div class="navbar-end">
+						  <a class="navbar-item is-active">
+							0.1 History
+						  </a>
+						  <a class="navbar-item">
+							0.2 Team
+						  </a>
+						</div>
+					  </div>
+					</div>
+				  </nav>
+			</div>
+			<div class="hero-body">
+			  <div class="container">
+			  </div>
+			</div>
+		</section>	
+		
+		<script>
+			document.getElementById('hamburger').addEventListener('click', function(){
+				this.classList.toggle('active');
+				document.querySelector('.mobile-menu').classList.toggle('active');
+			});
+		</script>
+	</body>
+</html>
